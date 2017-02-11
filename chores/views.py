@@ -1,8 +1,10 @@
 from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse
+
+from .forms import ChoreForm
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    form = ChoreForm()
+    return render(request, 'chores/index.html', {'form': form})
+   # return HttpResponse("Hello, world. You're at the polls index.")
