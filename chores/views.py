@@ -7,4 +7,3 @@ from .forms import ChoreForm
 def index(request):
     form = ChoreForm()
     return render(request, 'chores/index.html', {'form': form})
-   # return HttpResponse("Hello, world. You're at the polls index.")
